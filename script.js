@@ -4,7 +4,7 @@ const toggleButton = document.querySelector(".toggle-button");
 const toggleMenu = document.querySelector(".toggle-menu");
 
 toggleButton.addEventListener("click", ()=>{
-    toggleMenu.classList.toggle(".show-menu");
+    toggleMenu.classList.toggle("show-menu");
 });
 
 
