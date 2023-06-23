@@ -43,7 +43,7 @@ window.addEventListener("DOMContentLoaded", ()=> {
 
 const allProductWrap = document.querySelector(".all-product");
 
-    for (let i = 16; i > 0; i--) {
+    for (let i = 12; i > 0; i--) {
       const content = `
         <div class="product-item">
         <a href="./item${i}.html">

@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+body {
+  font-size: 0.875rem;
+}
+
 a {
   text-decoration: none;
   color: #333;
@@ -11,6 +15,10 @@ a {
 
 h1 {
   height: 100px;
+}
+
+dt {
+  font-weight: normal;
 }
 
 body {
@@ -34,17 +42,37 @@ body header .header-wrap {
   justify-content: space-between;
 }
 body header .header-wrap .toggle-button {
-  width: 50px;
-  height: 50px;
-  background-image: url(../img/bars-solid.svg);
+  width: 30px;
+  height: 30px;
   border: none;
+  position: relative;
+}
+body header .header-wrap .toggle-button span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  background-color: #333;
+  transition: all 2s;
+}
+body header .header-wrap .toggle-button span:nth-child(1) {
+  top: 10px;
+}
+body header .header-wrap .toggle-button span:nth-child(2) {
+  bottom: 10px;
 }
 body header .header-wrap .toggle-button.show-menu {
-  width: 50px;
-  height: 50px;
-  background-image: url(../img/xmark-solid.svg);
-  background-repeat: no-repeat;
   border: none;
+}
+body header .header-wrap .toggle-button.show-menu span {
+  background-color: #fff;
+}
+body header .header-wrap .toggle-button.show-menu span:nth-child(1) {
+  top: 14px;
+  transform: rotate(-45deg);
+}
+body header .header-wrap .toggle-button.show-menu span:nth-child(2) {
+  bottom: 10px;
+  transform: rotate(45deg);
 }
 body .toggle-menu {
   display: none;
@@ -63,13 +91,16 @@ body .toggle-menu.show-menu ul {
   padding-top: 50px;
 }
 body .toggle-menu.show-menu ul li {
-  height: 2rem;
+  height: 2.5rem;
+  padding-top: 5px;
 }
 body .toggle-menu.show-menu ul li a {
   color: #fff;
 }
 body main {
   margin-top: 200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 body main .product {
   width: 100%;
@@ -93,6 +124,11 @@ body main .product-more {
   text-align: center;
   margin-top: 100px;
   margin-bottom: 100px;
+}
+body footer {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  width: 100%;
 }
 body footer .footer-wrap {
   margin-top: 50px;
@@ -135,6 +171,12 @@ main .company-wrap .company-info dd:last-child {
 }
 main .company-wrap .map {
   margin-top: 100px;
+  position: relative;
+}
+main .company-wrap .map iframe {
+  filter: grayscale(100%);
+  position: absolute;
+  z-index: -1;
 }
 
 main {
@@ -157,6 +199,10 @@ main .all-product .product-item .product-img {
 }
 main .all-product .product-item dt, main .all-product .product-item dd {
   text-align: left;
+}
+
+.item-body {
+  height: 100vh;
 }
 
 main {
@@ -194,4 +240,11 @@ main a {
   display: block;
   text-align: center;
   margin: 50px;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 600px;
+  grid-template-rows: 1fr 1fr;
+  gap: 50px;
 }/*# sourceMappingURL=style.css.map */
