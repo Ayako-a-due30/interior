@@ -6,6 +6,9 @@
 
 body {
   font-size: 0.875rem;
+  max-width: 1360px;
+  position: relative;
+  min-height: calc(100vh - 200px);
 }
 
 a {
@@ -19,6 +22,22 @@ h1 {
 
 dt {
   font-weight: normal;
+}
+
+footer .footer-wrap {
+  bottom: 20px;
+  position: absolute;
+  width: 95%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer-wrap ul {
+  display: flex;
+}
+footer .footer-wrap ul li {
+  list-style: none;
+  padding-right: 40px;
 }
 
 body {
@@ -125,23 +144,6 @@ body main .product-more {
   margin-top: 100px;
   margin-bottom: 100px;
 }
-body footer {
-  grid-row-start: 2;
-  grid-row-end: 3;
-  width: 100%;
-}
-body footer .footer-wrap {
-  margin-top: 50px;
-  display: flex;
-  justify-content: space-between;
-}
-body footer .footer-wrap ul {
-  display: flex;
-}
-body footer .footer-wrap ul li {
-  list-style: none;
-  padding-right: 40px;
-}
 
 main .company-wrap .company {
   max-width: 600px;
@@ -201,10 +203,6 @@ main .all-product .product-item dt, main .all-product .product-item dd {
   text-align: left;
 }
 
-.item-body {
-  height: 100vh;
-}
-
 main {
   width: 1360px;
   padding: 40px;
@@ -247,4 +245,5 @@ main a {
   grid-template-columns: 600px;
   grid-template-rows: 1fr 1fr;
   gap: 50px;
+  margin: 50px;
 }/*# sourceMappingURL=style.css.map */
