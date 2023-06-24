@@ -94,9 +94,9 @@ body {
                 span:nth-child(2) {
                     bottom: 10px;
                     transform: rotate(45deg);
-                } 
+                }
             }
-            
+
         }//header-wrap
     }
         .toggle-menu {
@@ -120,7 +120,7 @@ body {
                         color: #fff;
                     }
                 }//li
-            
+
             }//ul
     }//header
 
@@ -167,6 +167,8 @@ body {
 
 main {
     .company-wrap {
+        // footerとの間に余白追加
+        padding-bottom: 160px;
         .company {
             max-width: 600px;
             &-info {
@@ -194,12 +196,15 @@ main {
             }
         }//company
         .map {
-            margin-top: 100px;
-            position: relative;
+            // 上部の余白を小さく調整しました。
+            margin-top: 20px;
+            // positionは不要だと思います。
+            // position: relative;
             iframe {
                 filter: grayscale(100%);
-                position: absolute;
-                z-index: -1;
+                // positionは不要だと思います
+                // position: absolute;
+                // z-index: -1;
             }
         }
     }//company-wrap

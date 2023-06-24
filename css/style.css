@@ -145,6 +145,9 @@ body main .product-more {
   margin-bottom: 100px;
 }
 
+main .company-wrap {
+  padding-bottom: 160px;
+}
 main .company-wrap .company {
   max-width: 600px;
 }
@@ -172,13 +175,10 @@ main .company-wrap .company-info dd:last-child {
   padding-top: 20px;
 }
 main .company-wrap .map {
-  margin-top: 100px;
-  position: relative;
+  margin-top: 20px;
 }
 main .company-wrap .map iframe {
   filter: grayscale(100%);
-  position: absolute;
-  z-index: -1;
 }
 
 main {
@@ -246,4 +246,4 @@ main a {
   grid-template-rows: 1fr 1fr;
   gap: 50px;
   margin: 50px;
-}/*# sourceMappingURL=style.css.map */
+}
