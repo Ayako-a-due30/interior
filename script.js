@@ -23,11 +23,11 @@ toggleButton.addEventListener("click", ()=>{
 // -------商品一覧(index.html)-----------
 window.addEventListener("DOMContentLoaded", ()=> {
 
-const productWrap = document.querySelector(".product");
+const productWrap = document.querySelector(".index-product");
 
     for (let i = 8; i > 0; i--) {
       const content = `
-        <div class="product-item">
+        <div class="index-item">
         <a href="./item${i}.html">
         <img src="./img/item${i}.jpg" alt="" class="product-img">
         <dt>プロダクト</dt>

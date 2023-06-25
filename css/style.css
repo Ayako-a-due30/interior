@@ -24,10 +24,12 @@ dt {
   font-weight: normal;
 }
 
+footer {
+  width: 100%;
+}
 footer .footer-wrap {
   bottom: 20px;
   position: absolute;
-  width: 95%;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
@@ -116,12 +118,12 @@ body .toggle-menu.show-menu ul li {
 body .toggle-menu.show-menu ul li a {
   color: #fff;
 }
-body main {
+body .index-main {
   margin-top: 200px;
   margin-right: auto;
   margin-left: auto;
 }
-body main .product {
+body .index-main .index-product {
   width: 100%;
   max-width: 1150px;
   display: grid;
@@ -132,19 +134,23 @@ body main .product {
   margin-right: auto;
   margin-left: auto;
 }
-body main .product .product-item a .product-img {
+body .index-main .index-product .index-item a .product-img {
   height: 250px;
   width: 250px;
 }
-body main .product .product-item a dt, body main .product .product-item a dd {
+body .index-main .index-product .index-item a dt,
+body .index-main .index-product .index-item a dd {
   text-align: left;
 }
-body main .product-more {
+body .index-main .index-more {
   text-align: center;
   margin-top: 100px;
   margin-bottom: 100px;
 }
 
+main .company-wrap {
+  padding-bottom: 160px;
+}
 main .company-wrap .company {
   max-width: 600px;
 }
@@ -154,12 +160,14 @@ main .company-wrap .company-info {
   width: 100%;
   height: auto;
 }
-main .company-wrap .company-info dt, main .company-wrap .company-info dd {
+main .company-wrap .company-info dt,
+main .company-wrap .company-info dd {
   height: 100px;
   padding-top: 40px;
   border-bottom: dotted 1px #333;
 }
-main .company-wrap .company-info dt:last-of-type, main .company-wrap .company-info dd:last-of-type {
+main .company-wrap .company-info dt:last-of-type,
+main .company-wrap .company-info dd:last-of-type {
   border-bottom: none;
 }
 main .company-wrap .company-info dt {
@@ -172,13 +180,10 @@ main .company-wrap .company-info dd:last-child {
   padding-top: 20px;
 }
 main .company-wrap .map {
-  margin-top: 100px;
-  position: relative;
+  margin-top: 20px;
 }
 main .company-wrap .map iframe {
   filter: grayscale(100%);
-  position: absolute;
-  z-index: -1;
 }
 
 main {
@@ -194,12 +199,15 @@ main .all-product {
   gap: 50px;
   margin-right: auto;
   margin-left: auto;
+  flex-direction: row-reverse;
+  flex-direction: column-reverse;
 }
 main .all-product .product-item .product-img {
   height: 250px;
   width: 250px;
 }
-main .all-product .product-item dt, main .all-product .product-item dd {
+main .all-product .product-item dt,
+main .all-product .product-item dd {
   text-align: left;
 }
 
@@ -225,7 +233,8 @@ main .item-wrap .item-info dl {
   display: flex;
   flex-wrap: wrap;
 }
-main .item-wrap .item-info dl dt, main .item-wrap .item-info dl dd {
+main .item-wrap .item-info dl dt,
+main .item-wrap .item-info dl dd {
   height: 30px;
 }
 main .item-wrap .item-info dl dt {
@@ -246,4 +255,54 @@ main a {
   grid-template-rows: 1fr 1fr;
   gap: 50px;
   margin: 50px;
+}
+
+@media (max-width: 900px) {
+  body {
+    width: 100vw;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  body .index-main {
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    margin-top: 200px;
+    margin-bottom: 200px;
+  }
+  body .index-main .index-product {
+    width: 100%;
+    margin: 0;
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: repeat(4, 250px);
+  }
+  body .index-main .index-more {
+    max-width: 900px;
+    display: block;
+  }
+  body .product-main {
+    width: 90%;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+    margin-top: 200px;
+    margin-bottom: 200px;
+  }
+  body .product-main .all-product {
+    width: 100%;
+    margin: 0;
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: repeat(8, 250px);
+  }
+  body footer {
+    height: 100px;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    position: absolute;
+  }
+  body .product {
+    max-width: 900px;
+  }
 }/*# sourceMappingURL=style.css.map */
