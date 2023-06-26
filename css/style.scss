@@ -29,6 +29,7 @@ dt {
 
 footer {
     width: 100%;
+
     .footer-wrap {
         bottom: 20px;
         position: absolute;
@@ -54,10 +55,12 @@ footer {
 //footer
 
 // index.html-----------------------------
-body {
+body.index-body {
     padding-left: 40px;
     padding-right: 40px;
+}
 
+body {
     header {
         width: 100%;
         height: 150px;
@@ -207,14 +210,17 @@ body {
 }
 
 
+
 // company.html-----------------------------
 
 main {
     .company-wrap {
+        margin-right: 50px;
+        margin-left: 50px;
         padding-bottom: 160px;
-
         // footerとの間に余白追加
         padding-bottom: 160px;
+
         .company {
             max-width: 600px;
 
@@ -227,7 +233,7 @@ main {
                 dt,
                 dd {
                     height: 100px;
-                    padding-top: 40px;
+                    padding-top: 50px;
                     border-bottom: dotted 1px #333;
 
                     &:last-of-type {
@@ -305,7 +311,7 @@ main {
 
 main {
     width: 1360px;
-    padding: 40px;
+    padding: 0;
 
     .item-wrap {
         .item {
@@ -369,9 +375,25 @@ main {
 
 @media(max-width:900px) {
     body {
-        width:100vw;
-        margin-right: 0;
-        margin-left: 0;
+        width: 100%;
+
+        // margin-right: 0;
+        // margin-left: 0;
+        header {
+            .toggle-menu.show-menu {
+                ul {
+                    height: 100vw;
+                    display: block;
+
+                    li {
+                        height: 50px;
+                        padding-top: 10px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
         //index.html-------------------
         .index-main {
             width: 90%;
@@ -380,45 +402,173 @@ main {
             padding: 0;
             margin-top: 200px;
             margin-bottom: 200px;
+
             .index-product {
                 width: 100%;
                 margin: 0;
                 grid-template-columns: repeat(2, 250px);
                 grid-template-rows: repeat(4, 250px);
             }
+
             .index-more {
                 max-width: 900px;
                 display: block;
             }
         }
+
         //product.html-----------------
         .product-main {
-            width: 90%;
-            margin-left: 0;
-            margin-right: 0;
+            max-width: 900px;
+            width: 100%;
+            // margin-left: 0;
+            // margin-right: 0;
             padding: 0;
             margin-top: 200px;
             margin-bottom: 200px;
+            margin-left: auto;
+            margin-right: auto;
+
             .all-product {
-                width: 100%;
+                width: 90%;
                 margin: 0;
-                grid-template-columns: repeat(2, 250px);
-                grid-template-rows: repeat(8, 250px);
+                display: grid;
+                row-gap: 50px;
+                column-gap: 10px;
+                grid-template-columns: repeat(2, 2fr);
+                grid-template-rows: repeat(8, 8fr);
+
+                .product-item {
+                    a {
+                        margin: 0;
+
+                        .product-img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
             }
 
         }
-        
+
+        //item.html-----------------
+        .item-main {
+            width: 100%;
+
+            .item-wrap {
+                .item {
+                    justify-content: space-between;
+                    flex-direction: column;
+
+                    &-img {
+                        display: inline;
+                    }
+
+                    &-info {
+                        width: 90%;
+                        margin-left: 0;
+                        margin-top: 30px;
+
+                        dl {
+                            flex-direction: column;
+                        }
+
+                        //dl
+                    }
+
+                    //item-info
+                }
+
+                //item
+            }
+
+            //item-wrap
+            a.item-back {
+                display: inline-block;
+                margin: 0;
+            }
+        }
+
+        //item-main
         footer {
             height: 100px;
             bottom: 20px;
             left: 0;
             right: 0;
-            position: absolute;
+            // position: absolute;
+            width: 100%;
+
+            .footer-wrap {
+                flex-direction: column;
+            }
         }
-    
+
+        //footer
+
         .product {
             max-width: 900px;
         }
-    
+
+        //product
+
+        //about.html-------------------
+
+        //htmlがすごく狭い
+        .about-main {
+            max-width: 900px;
+
+            .content-wrap {
+                width: 100%;
+                margin: 0 auto;
+                .about {
+                    display: block;
+                    p {
+                        margin: 0;
+                    }
+
+                    //p
+                }
+
+                //about
+            }
+
+            //content-wrap
+        }
+
+        //main
     }
+
+    //body
+    
+    //company.html-------------------
+//すごく長いページになってしまう？
+    .company-wrap {
+        margin-left: 40px;
+        margin-right: 40px;
+        width: 100%;
+        .company {
+            max-width: 900px;
+            .company-info {
+                flex-direction: column;
+                width: 800px;
+                dt,dd {
+                    height: 50px;
+                    padding-top: 10px;
+                }
+                dt {
+                    border-bottom: none;
+                }
+            }
+        }
+        .map {
+            display: inline;
+            iframe {
+                width: 300px;
+                height: 300px;
+            }
+        }
 }
+
+
+}
+//@media(max-width:900)

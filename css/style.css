@@ -42,10 +42,11 @@ footer .footer-wrap ul li {
   padding-right: 40px;
 }
 
-body {
+body.index-body {
   padding-left: 40px;
   padding-right: 40px;
 }
+
 body header {
   width: 100%;
   height: 150px;
@@ -149,6 +150,9 @@ body .index-main .index-more {
 }
 
 main .company-wrap {
+  margin-right: 50px;
+  margin-left: 50px;
+  padding-bottom: 160px;
   padding-bottom: 160px;
 }
 main .company-wrap .company {
@@ -163,7 +167,7 @@ main .company-wrap .company-info {
 main .company-wrap .company-info dt,
 main .company-wrap .company-info dd {
   height: 100px;
-  padding-top: 40px;
+  padding-top: 50px;
   border-bottom: dotted 1px #333;
 }
 main .company-wrap .company-info dt:last-of-type,
@@ -213,7 +217,7 @@ main .all-product .product-item dd {
 
 main {
   width: 1360px;
-  padding: 40px;
+  padding: 0;
 }
 main .item-wrap .item {
   display: flex;
@@ -255,14 +259,20 @@ main a {
   grid-template-rows: 1fr 1fr;
   gap: 50px;
   margin: 50px;
-<<<<<<< HEAD
 }
 
 @media (max-width: 900px) {
   body {
-    width: 100vw;
-    margin-right: 0;
-    margin-left: 0;
+    width: 100%;
+  }
+  body header .toggle-menu.show-menu ul {
+    height: 100vw;
+    display: block;
+  }
+  body header .toggle-menu.show-menu ul li {
+    height: 50px;
+    padding-top: 10px;
+    font-size: 20px;
   }
   body .index-main {
     width: 90%;
@@ -283,30 +293,103 @@ main a {
     display: block;
   }
   body .product-main {
-    width: 90%;
-    margin-left: 0;
-    margin-right: 0;
+    max-width: 900px;
+    width: 100%;
     padding: 0;
     margin-top: 200px;
     margin-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
   }
   body .product-main .all-product {
-    width: 100%;
+    width: 90%;
     margin: 0;
-    grid-template-columns: repeat(2, 250px);
-    grid-template-rows: repeat(8, 250px);
+    display: grid;
+    row-gap: 50px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(8, 8fr);
+  }
+  body .product-main .all-product .product-item a {
+    margin: 0;
+  }
+  body .product-main .all-product .product-item a .product-img {
+    width: 100%;
+    height: 100%;
+  }
+  body .item-main {
+    width: 100%;
+  }
+  body .item-main .item-wrap .item {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  body .item-main .item-wrap .item-img {
+    display: inline;
+  }
+  body .item-main .item-wrap .item-info {
+    width: 90%;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  body .item-main .item-wrap .item-info dl {
+    flex-direction: column;
+  }
+  body .item-main a.item-back {
+    display: inline-block;
+    margin: 0;
   }
   body footer {
     height: 100px;
     bottom: 20px;
     left: 0;
     right: 0;
-    position: absolute;
+    width: 100%;
+  }
+  body footer .footer-wrap {
+    flex-direction: column;
   }
   body .product {
     max-width: 900px;
   }
+  body .about-main {
+    max-width: 900px;
+  }
+  body .about-main .content-wrap {
+    width: 100%;
+    margin: 0 auto;
+  }
+  body .about-main .content-wrap .about {
+    display: block;
+  }
+  body .about-main .content-wrap .about p {
+    margin: 0;
+  }
+  .company-wrap {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 100%;
+  }
+  .company-wrap .company {
+    max-width: 900px;
+  }
+  .company-wrap .company .company-info {
+    flex-direction: column;
+    width: 800px;
+  }
+  .company-wrap .company .company-info dt, .company-wrap .company .company-info dd {
+    height: 50px;
+    padding-top: 10px;
+  }
+  .company-wrap .company .company-info dt {
+    border-bottom: none;
+  }
+  .company-wrap .map {
+    display: inline;
+  }
+  .company-wrap .map iframe {
+    width: 300px;
+    height: 300px;
+  }
 }/*# sourceMappingURL=style.css.map */
-=======
-}
->>>>>>> 4d3ccffad069290d9ebdb431af8f16649bb840eb
