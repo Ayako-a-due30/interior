@@ -216,7 +216,6 @@ main .all-product .product-item dd {
 }
 
 main {
-  width: 1360px;
   padding: 0;
 }
 main .item-wrap .item {
@@ -306,8 +305,7 @@ main a {
     margin: 0;
     display: grid;
     row-gap: 50px;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
+    column-gap: 10px;
     grid-template-columns: repeat(2, 2fr);
     grid-template-rows: repeat(8, 8fr);
   }
@@ -389,4 +387,4 @@ main a {
     width: 300px;
     height: 300px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
