@@ -545,15 +545,15 @@ main {
     .company-wrap {
         margin-left: 40px;
         margin-right: 40px;
-        width: 100%;
+        // width: 100%;
+        max-width: 900px;
         .company {
-            max-width: 900px;
             .company-info {
                 flex-direction: column;
-                width: 800px;
                 dt,dd {
                     height: 50px;
                     padding-top: 10px;
+                    max-width: 90%;
                 }
                 dt {
                     border-bottom: none;

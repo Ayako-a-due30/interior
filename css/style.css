@@ -369,18 +369,15 @@ main a {
   .company-wrap {
     margin-left: 40px;
     margin-right: 40px;
-    width: 100%;
-  }
-  .company-wrap .company {
     max-width: 900px;
   }
   .company-wrap .company .company-info {
     flex-direction: column;
-    width: 800px;
   }
   .company-wrap .company .company-info dt, .company-wrap .company .company-info dd {
     height: 50px;
     padding-top: 10px;
+    max-width: 90%;
   }
   .company-wrap .company .company-info dt {
     border-bottom: none;
