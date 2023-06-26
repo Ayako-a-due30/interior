@@ -255,6 +255,7 @@ main a {
   grid-template-rows: 1fr 1fr;
   gap: 50px;
   margin: 50px;
+<<<<<<< HEAD
 }
 
 @media (max-width: 900px) {
@@ -306,3 +307,6 @@ main a {
     max-width: 900px;
   }
 }/*# sourceMappingURL=style.css.map */
+=======
+}
+>>>>>>> 4d3ccffad069290d9ebdb431af8f16649bb840eb
