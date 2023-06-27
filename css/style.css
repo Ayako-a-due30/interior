@@ -323,8 +323,7 @@ main a {
     margin-right: auto;
     display: grid;
     row-gap: 50px;
-    -moz-column-gap: 10px;
-         column-gap: 10px;
+    column-gap: 10px;
     grid-template-columns: repeat(2, 2fr);
     grid-template-rows: repeat(8, 8fr);
   }
@@ -408,6 +407,8 @@ main a {
     width: 300px;
     height: 300px;
   }
+
+}
   footer {
     display: flex;
     justify-content: center;
@@ -423,3 +424,4 @@ main a {
     margin-top: 5%;
   }
 }/*# sourceMappingURL=style.css.map */
+

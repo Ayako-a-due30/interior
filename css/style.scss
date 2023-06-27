@@ -314,6 +314,9 @@ main {
 // item.html-----------------------------
 
 main {
+
+    // レイアウトに絶対値を指定するとレスポンシブが崩れる可能性が高くなります。
+
     // width: 1360px;
     padding: 0;
 
@@ -564,7 +567,7 @@ main {
     }
 
     //body
-    
+
     //company.html-------------------
     .company-wrap {
         margin-left: 10%;
