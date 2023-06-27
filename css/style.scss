@@ -20,7 +20,7 @@ a {
 }
 
 h1 {
-    height: 100px;
+    height: 10%;
 }
 
 dt {
@@ -29,10 +29,14 @@ dt {
 
 footer {
     width: 100%;
+    height: 10%;//footerが真ん中に持って来れない
 
     .footer-wrap {
         bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
         position: absolute;
+        width: 85%;
         margin-top: 50px;
         display: flex;
         justify-content: space-between;
@@ -310,7 +314,9 @@ main {
 // item.html-----------------------------
 
 main {
+
     // レイアウトに絶対値を指定するとレスポンシブが崩れる可能性が高くなります。
+
     // width: 1360px;
     padding: 0;
 
@@ -366,15 +372,34 @@ main {
 }
 
 // about.html-----------------------------
-.about {
-    display: grid;
-    grid-template-columns: 600px;
-    grid-template-rows: 1fr 1fr;
-    gap: 50px;
-    margin: 50px;
+.content-wrap {
+    margin-left: 10%;
+    margin-right: 10%;
+    .about {
+        display: grid;
+        grid-template-columns: 600px;
+        grid-template-rows: 1fr 1fr;
+        gap: 50px;
+        margin: 35px;
+    }
+
 }
 
+
 @media(max-width:900px) {
+    .header-wrap{
+        padding-top: 0;
+        padding-right: 5%;
+        padding-left: 5%;
+        .logo {
+            a {
+                img {
+                    width: 60%;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
     body {
         width: 100%;
 
@@ -431,7 +456,8 @@ main {
 
             .all-product {
                 width: 90%;
-                margin: 0;
+                margin-left: auto;
+                margin-right: auto;
                 display: grid;
                 row-gap: 50px;
                 column-gap: 10px;
@@ -514,15 +540,16 @@ main {
 
         //about.html-------------------
 
-        //htmlがすごく狭い
         .about-main {
-            max-width: 900px;
+            max-width: 100%;
 
             .content-wrap {
-                width: 100%;
-                margin: 0 auto;
                 .about {
-                    display: block;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 2fr;
+                    gap: 10%;
+                    
                     p {
                         margin: 0;
                     }
@@ -542,34 +569,48 @@ main {
     //body
 
     //company.html-------------------
-//すごく長いページになってしまう？
     .company-wrap {
-        margin-left: 40px;
-        margin-right: 40px;
-        // width: 100%;
+        margin-left: 10%;
+        margin-right: 10%;
         max-width: 900px;
         .company {
+            width: 100%;
             .company-info {
                 flex-direction: column;
                 dt,dd {
-                    height: 50px;
-                    padding-top: 10px;
-                    max-width: 90%;
+                    height: 30%;
+                    width: 100%;
+                    padding: 20px 10px;
                 }
                 dt {
                     border-bottom: none;
                 }
             }
-        }
+        }//company
         .map {
             display: inline;
             iframe {
                 width: 300px;
                 height: 300px;
             }
+        }//map
+}//company-wrap
+footer {
+    display: flex;
+    justify-content: center;        
+    .footer-wrap {
+        ul {
+            margin-right: auto;
+            margin-left: auto;
+            li {
+                margin-right: 3%;
+            }
         }
+        div {
+            margin-top: 5%;
+        }
+    }
 }
-
 
 }
 //@media(max-width:900)
