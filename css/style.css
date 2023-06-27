@@ -17,7 +17,7 @@ a {
 }
 
 h1 {
-  height: 100px;
+  height: 10%;
 }
 
 dt {
@@ -26,10 +26,14 @@ dt {
 
 footer {
   width: 100%;
+  height: 10%;
 }
 footer .footer-wrap {
   bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
   position: absolute;
+  width: 85%;
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
@@ -216,7 +220,6 @@ main .all-product .product-item dd {
 }
 
 main {
-  width: 1360px;
   padding: 0;
 }
 main .item-wrap .item {
@@ -253,15 +256,28 @@ main a {
   margin: 50px;
 }
 
-.about {
+.content-wrap {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.content-wrap .about {
   display: grid;
   grid-template-columns: 600px;
   grid-template-rows: 1fr 1fr;
   gap: 50px;
-  margin: 50px;
+  margin: 35px;
 }
 
 @media (max-width: 900px) {
+  .header-wrap {
+    padding-top: 0;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  .header-wrap .logo a img {
+    width: 60%;
+    vertical-align: middle;
+  }
   body {
     width: 100%;
   }
@@ -303,7 +319,8 @@ main a {
   }
   body .product-main .all-product {
     width: 90%;
-    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
     display: grid;
     row-gap: 50px;
     -moz-column-gap: 10px;
@@ -354,30 +371,32 @@ main a {
     max-width: 900px;
   }
   body .about-main {
-    max-width: 900px;
-  }
-  body .about-main .content-wrap {
-    width: 100%;
-    margin: 0 auto;
+    max-width: 100%;
   }
   body .about-main .content-wrap .about {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    gap: 10%;
   }
   body .about-main .content-wrap .about p {
     margin: 0;
   }
   .company-wrap {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 10%;
+    margin-right: 10%;
     max-width: 900px;
+  }
+  .company-wrap .company {
+    width: 100%;
   }
   .company-wrap .company .company-info {
     flex-direction: column;
   }
   .company-wrap .company .company-info dt, .company-wrap .company .company-info dd {
-    height: 50px;
-    padding-top: 10px;
-    max-width: 90%;
+    height: 30%;
+    width: 100%;
+    padding: 20px 10px;
   }
   .company-wrap .company .company-info dt {
     border-bottom: none;
@@ -388,5 +407,19 @@ main a {
   .company-wrap .map iframe {
     width: 300px;
     height: 300px;
+  }
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+  footer .footer-wrap ul {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  footer .footer-wrap ul li {
+    margin-right: 3%;
+  }
+  footer .footer-wrap div {
+    margin-top: 5%;
   }
 }/*# sourceMappingURL=style.css.map */
