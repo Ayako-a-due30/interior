@@ -34,7 +34,9 @@ const productWrap = document.querySelector(".index-product");
         <dd>¥99,999 +tax</dd>
         </a>
         </div>`;
-        // 下のコードのinsertAdjacentHTMLの第一引数に"afterbegin"を入れてしまうと呼び出した新しい要素が常に先頭に挿入されてしまう為、最初に呼ばれた１が下になっていました。
+        // 下のコードのinsertAdjacentHTMLの第一引数に"afterbegin"を
+        //入れてしまうと呼び出した新しい要素が常に先頭に挿入されてしまう為、
+        //最初に呼ばれた１が下になっていました。
         // "beforeend"に変えると良いですね！！
       // productWrap.insertAdjacentHTML("afterbegin", content);
       productWrap.insertAdjacentHTML("beforeend", content);
@@ -46,7 +48,7 @@ window.addEventListener("DOMContentLoaded", ()=> {
 
 const allProductWrap = document.querySelector(".all-product");
 
-    for (let i = 16; i > 0; i--) {
+    for (let i = 1; i <= 12; i++) {
       const content = `
         <div class="product-item">
         <a href="./item${i}.html">
@@ -56,6 +58,25 @@ const allProductWrap = document.querySelector(".all-product");
         <dd>¥99,999 +tax</dd>
         </a>
         </div>`;
-      allProductWrap.insertAdjacentHTML("afterbegin", content);
+      allProductWrap.insertAdjacentHTML("beforeend", content);
     }
 });
+// -------商品一覧:２ページ目(product2.html)----
+window.addEventListener("DOMContentLoaded", ()=> {
+
+  const allProductWrap = document.querySelector(".all-product2");
+  
+      for (let i = 13; i <= 16; i++) {
+        const content = `
+          <div class="product-item">
+          <a href="./item${i}.html">
+  
+          <img src="./img/item${i}.jpg" alt="" class="product-img">
+          <dt>プロダクト</dt>
+          <dd>¥99,999 +tax</dd>
+          </a>
+          </div>`;
+        allProductWrap.insertAdjacentHTML("beforeend", content);
+      }
+  });
+  

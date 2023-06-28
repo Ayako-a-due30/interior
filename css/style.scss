@@ -42,7 +42,7 @@ footer {
         // margin-left: auto;
         // margin-right: auto;
         // position: absolute;
-        width: 85%;
+        // width: 85%;
         margin-top: 50px;
         display: flex;
         justify-content: space-between;
@@ -141,7 +141,7 @@ body {
 
     .toggle-menu.show-menu {
         z-index: -5;
-        height: 100vh;
+        height: calc(100vh + 20px);
         width: 100%;
         top: 0;
         position: absolute;
@@ -229,7 +229,6 @@ main {
     .company-wrap {
         margin-right: 50px;
         margin-left: 50px;
-        padding-bottom: 160px;
         // footerとの間に余白追加
         padding-bottom: 160px;
 
@@ -283,28 +282,43 @@ main {
     //company-wrap
 }
 
-// product.html-----------------------------
+// product.html,product2.html-------------------
 main {
     margin-top: 200px;
 
-    .all-product {
+    .all-product,.all-product2 {
         width: 100%;
         max-width: 1150px;
         display: grid;
         place-items: center;
         grid-template-columns: repeat(4, 250px);
-        grid-template-rows: repeat(4, 250px);
+        grid-template-rows: repeat(3, 250px);
         gap: 50px;
         margin-right: auto;
         margin-left: auto;
         flex-direction: row-reverse;
         flex-direction: column-reverse;
+    }
+    .all-product2 {
+        width: 100%;
+        max-width: 1150px;
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(4, 250px);
+        grid-template-rows: 250px;
+        gap: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        flex-direction: row-reverse;
+        flex-direction: column-reverse;
+    }
+
 
         .product-item {
             .product-img {
                 height: 250px;
                 width: 250px;
-            }
+        }
 
             //product-img
             dt,
@@ -314,9 +328,21 @@ main {
         }
 
         //product-item
-    }
 
     //all-product
+    .pagenation {
+        display: flex;
+        margin-top: 80px;
+        justify-content: center;
+        li {
+            padding: 0 20px;
+            a{
+                margin: 0;
+                display: block;
+            }
+        }
+    }
+
 }
 
 // item.html-----------------------------
@@ -325,7 +351,6 @@ main {
 
     // レイアウトに絶対値を指定するとレスポンシブが崩れる可能性が高くなります。
 
-    // width: 1360px;
     padding: 0;
 
     .item-wrap {
@@ -381,14 +406,14 @@ main {
 
 // about.html-----------------------------
 .content-wrap {
-    margin-left: 10%;
-    margin-right: 10%;
     .about {
         display: grid;
         grid-template-columns: 600px;
         grid-template-rows: 1fr 1fr;
         gap: 50px;
-        margin: 35px;
+        p {
+            line-height: 2;
+        }
     }
 
 }
@@ -454,11 +479,8 @@ main {
         .product-main {
             max-width: 900px;
             width: 100%;
-            // margin-left: 0;
-            // margin-right: 0;
             padding: 0;
             margin-top: 200px;
-            margin-bottom: 200px;
             margin-left: auto;
             margin-right: auto;
 
@@ -470,7 +492,21 @@ main {
                 row-gap: 50px;
                 column-gap: 10px;
                 grid-template-columns: repeat(2, 2fr);
-                grid-template-rows: repeat(8, 8fr);
+                grid-template-rows: repeat(6, 8fr);
+
+            }//all-product
+            .all-product2 {
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                display: grid;
+                row-gap: 50px;
+                column-gap: 10px;
+                grid-template-columns: repeat(2, 2fr);
+                grid-template-rows: repeat(2, 8fr);
+
+            }//all-product2
+
 
                 .product-item {
                     a {
@@ -482,7 +518,6 @@ main {
                         }
                     }
                 }
-            }
 
         }
 
@@ -578,9 +613,8 @@ main {
 
     //company.html-------------------
     .company-wrap {
-        margin-left: 10%;
-        margin-right: 10%;
         max-width: 900px;
+        padding-bottom: 50px;
         .company {
             width: 100%;
             .company-info {
@@ -598,8 +632,8 @@ main {
         .map {
             display: inline;
             iframe {
-                width: 300px;
-                height: 300px;
+                width: 200px;
+                height: 200px;
             }
         }//map
 }//company-wrap
