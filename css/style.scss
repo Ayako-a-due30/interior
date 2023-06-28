@@ -178,21 +178,35 @@ body {
 
         .index-product {
             width: 100%;
-            max-width: 1150px;
-            display: grid;
+            // もう少し大きくして４アイテムを横に並べるようにしておきましょう！
+            max-width: 1500px;
+            // max-width: 1150px;
+              // 実は子要素のサイズを保ったままレスポンシブする場合はdisplay:flexのが簡単です。gridでも出来ますが少し難しくなります。
+            // display: grid;
+            display: flex;
+            // 自動で折り返すようにする
+            flex-wrap: wrap;
+            // 要素全体を真ん中寄せにする
+            justify-content: center;
             place-items: center;
-            grid-template-columns: repeat(4, 250px);
-            grid-template-rows: repeat(2, 250px);
+            // grid-template-columns: repeat(4, 250px);
+            // grid-template-rows: repeat(2, 250px);
             gap: 50px;
             // margin-right: auto;
             // margin-left: auto;
 
             // flex-direction: row;出力が８→１と逆向き
             .index-item {
+                // 要素の最大サイズを300px指定
+                max-width: 300px;
                 a {
+                    // 余分なマージン削除
+                    margin: 0;
                     .product-img {
-                        height: 250px;
-                        width: 250px;
+                        // レイアウトに絶対値指定をしない。また、widthとheight両方にサイズ指定するとレスポンシブ時に崩れる可能性がるので、基本はwidthだけに指定していく。
+                        // height: 250px;
+                        // width: 250px;
+                        width: 100%;
                     }
 
                     dt,
@@ -273,6 +287,9 @@ main {
             // position: relative;
             iframe {
                 filter: grayscale(100%);
+                // z-indexはposition:relativeでも使用できます。こうすれば要素が浮き上がる事なく重なりを調整出来ます。
+                position: relative;
+                z-index: -1;
                 // position: absolute;
                 // z-index: -1;
             }
@@ -288,20 +305,31 @@ main {
 
     .all-product,.all-product2 {
         width: 100%;
-        max-width: 1150px;
-        display: grid;
+            // もう少し大きくして４アイテムを横に並べるようにしておきましょう！
+            max-width: 1500px;
+        // max-width: 1150px;
+        // 実は子要素のサイズを保ったままレスポンシブする場合はdisplay:flexのが簡単です。gridでも出来ますが少し難しくなります。
+        display: flex;
+        // display: grid;
+        // 自動で折り返すように指定
+        flex-wrap: wrap;
+        // 要素全体を真ん中寄せにする
+        justify-content: center;
         place-items: center;
-        grid-template-columns: repeat(4, 250px);
-        grid-template-rows: repeat(3, 250px);
+        // gridは使わない
+        // grid-template-columns: repeat(4, 250px);
+        // grid-template-rows: repeat(3, 250px);
         gap: 50px;
-        margin-right: auto;
-        margin-left: auto;
-        flex-direction: row-reverse;
-        flex-direction: column-reverse;
+        // 真ん中寄せはいらない
+        // margin-right: auto;
+        // margin-left: auto;
+        // 並び方向の指定はいらない
+        // flex-direction: row-reverse;
+        // 縦方向並びしてはいらない
+        // flex-direction: column-reverse;
     }
     .all-product2 {
         width: 100%;
-        max-width: 1150px;
         display: grid;
         place-items: center;
         grid-template-columns: repeat(4, 250px);
@@ -315,9 +343,18 @@ main {
 
 
         .product-item {
+            // 子要素の最大サイズを指定
+            max-width: 300px;
+            a{
+                // 余分なマージン削除
+                margin: 0;
+            }
             .product-img {
-                height: 250px;
-                width: 250px;
+                // レイアウトには基本的に絶対値を使わない。また、widthとheight両方にサイズ指定するとレスポンシブ時に崩れる可能性がるので、基本はwidthだけに指定していく。
+                // height: 250px;
+                // width: 250px;
+                // .product-itemにサイズを合わせるように指定
+                width: 100%;
         }
 
             //product-img
@@ -455,7 +492,8 @@ main {
 
         //index.html-------------------
         .index-main {
-            width: 90%;
+            // これは要らないと思いました
+            // width: 90%;
             margin-left: 0;
             margin-right: 0;
             padding: 0;
@@ -467,6 +505,11 @@ main {
                 margin: 0;
                 grid-template-columns: repeat(2, 250px);
                 grid-template-rows: repeat(4, 250px);
+            }
+
+            .index-item{
+                // レスポンシブ時に%指定に変えて要素の横並びを2個以上を保つようにする
+                width: 40%;
             }
 
             .index-more {
@@ -488,11 +531,12 @@ main {
                 width: 90%;
                 margin-left: auto;
                 margin-right: auto;
-                display: grid;
+                // gridは使わない
+                // display: grid;
                 row-gap: 50px;
                 column-gap: 10px;
-                grid-template-columns: repeat(2, 2fr);
-                grid-template-rows: repeat(6, 8fr);
+                // grid-template-columns: repeat(2, 2fr);
+                // grid-template-rows: repeat(6, 8fr);
 
             }//all-product
             .all-product2 {
@@ -509,6 +553,8 @@ main {
 
 
                 .product-item {
+                    // レスポンシブ時に%指定に変えて要素の横並びを2個以上を保つようにする
+                    width: 40%;
                     a {
                         margin: 0;
 
