@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", ()=> {
 
 const productWrap = document.querySelector(".index-product");
 
-    for (let i = 8; i > 0; i--) {
+    for (let i = 1; i <= 8; i++) {
       const content = `
         <div class="index-item">
         <a href="./item${i}.html">
@@ -34,7 +34,10 @@ const productWrap = document.querySelector(".index-product");
         <dd>¥99,999 +tax</dd>
         </a>
         </div>`;
-      productWrap.insertAdjacentHTML("afterbegin", content);
+        // 下のコードのinsertAdjacentHTMLの第一引数に"afterbegin"を入れてしまうと呼び出した新しい要素が常に先頭に挿入されてしまう為、最初に呼ばれた１が下になっていました。
+        // "beforeend"に変えると良いですね！！
+      // productWrap.insertAdjacentHTML("afterbegin", content);
+      productWrap.insertAdjacentHTML("beforeend", content);
     }
 });
 
@@ -47,7 +50,7 @@ const allProductWrap = document.querySelector(".all-product");
       const content = `
         <div class="product-item">
         <a href="./item${i}.html">
-        
+
         <img src="./img/item${i}.jpg" alt="" class="product-img">
         <dt>プロダクト</dt>
         <dd>¥99,999 +tax</dd>
