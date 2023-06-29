@@ -391,7 +391,7 @@ main {
     // レイアウトに絶対値を指定するとレスポンシブが崩れる可能性が高くなります。
 
     padding: 0;
-
+    margin-bottom: 10%;
     .item-wrap {
         .item {
             display: flex;
@@ -446,6 +446,7 @@ main {
 // about.html-----------------------------
 .content-wrap {
     .about {
+        margin-bottom: 150px;
         display: grid;
         grid-template-columns: 600px;
         grid-template-rows: 1fr 1fr;
@@ -474,6 +475,7 @@ main {
     }
     body {
         width: 100%;
+        margin-bottom: 50px;
 
         // margin-right: 0;
         // margin-left: 0;
@@ -602,8 +604,9 @@ main {
 
             //item-wrap
             a.item-back {
-                display: inline-block;
-                margin: 0;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
             }
         }
 
