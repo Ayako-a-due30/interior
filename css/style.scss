@@ -287,7 +287,8 @@ main {
             // position: relative;
             iframe {
                 filter: grayscale(100%);
-                // z-indexはposition:relativeでも使用できます。こうすれば要素が浮き上がる事なく重なりを調整出来ます。
+                // z-indexはposition:relativeでも使用できます。
+                //こうすれば要素が浮き上がる事なく重なりを調整出来ます。
                 position: relative;
                 z-index: -1;
                 // position: absolute;
@@ -350,7 +351,8 @@ main {
                 margin: 0;
             }
             .product-img {
-                // レイアウトには基本的に絶対値を使わない。また、widthとheight両方にサイズ指定するとレスポンシブ時に崩れる可能性がるので、基本はwidthだけに指定していく。
+                // レイアウトには基本的に絶対値を使わない。また、
+                //widthとheight両方にサイズ指定するとレスポンシブ時に崩れる可能性がるので、基本はwidthだけに指定していく。
                 // height: 250px;
                 // width: 250px;
                 // .product-itemにサイズを合わせるように指定
@@ -634,6 +636,7 @@ main {
 
             .content-wrap {
                 .about {
+                    margin-bottom: 50px;
                     display: grid;
                     grid-template-columns: 1fr;
                     grid-template-rows: 2fr;
